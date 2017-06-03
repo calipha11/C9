@@ -24,8 +24,7 @@ middlewareObj.checkCampgroundOwnership = function(req, res, next) {
         req.flash("error", "You need to be logged in to do that");
         res.redirect("back");   
     }
-}   
-
+};
 
 middlewareObj.checkCommentOwnership = function(req, res, next) {
     if(req.isAuthenticated()){
@@ -45,7 +44,7 @@ middlewareObj.checkCommentOwnership = function(req, res, next) {
         req.flash("error", "You need to be logged in to do that");
         res.redirect("back");   
     }
-}
+};
 
 middlewareObj.isLoggedIn = function isLoggedIn(req, res, next){
     if(req.isAuthenticated()){
@@ -53,6 +52,6 @@ middlewareObj.isLoggedIn = function isLoggedIn(req, res, next){
     }
     req.flash("error", "You need to be logged in to do that");
     res.redirect("/login");
-}
+};
 
-module.exports = middlewareObj
+module.exports = middlewareObj;
